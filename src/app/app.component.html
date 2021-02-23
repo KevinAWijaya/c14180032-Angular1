@@ -1,4 +1,25 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+  <h2>Latihan Angular 1</h2>
+
+<div *ngFor="let i of board">
+    <span *ngFor="let j of i">
+        {{j}}
+    </span>
+</div>
+
+<br>
+Player {{turn}} Turn <br>
+baris = <input [(ngModel)]="baris" type="number"> <br>
+kolom = <input [(ngModel)]="kolom" type="number"> <br>
+<button (click)="REFRESH(turn)">GO</button>
+
+<div>{{hasil}}</div>
+
+<ng-template #template0>
+  
+</ng-template>
+<ng-template #template1>
+  
+</ng-template>
+
+</div>
