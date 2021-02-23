@@ -7,9 +7,9 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   board = [
-      ["1", "*", "*", "*", "*"],
-      ["1", "*", "*", "*", "*"],
-      ["1", "*", "*", "*", "*"],
+      ["*", "*", "*", "*", "*"],
+      ["*", "*", "*", "*", "*"],
+      ["*", "*", "*", "*", "*"],
       ["*", "*", "*", "*", "*"],
       ["*", "*", "*", "*", "*"]
   ]
@@ -45,6 +45,7 @@ export class AppComponent  {
       this.board[i][0] != "*"){
         this.win = true;
         this.hasil = "PLAYER " + this.turn +" WIN";
+        return 0;
       }
       else if(this.board[i][1] == this.board[i][2] &&
       this.board[i][1] == this.board[i][3] &&
@@ -52,6 +53,7 @@ export class AppComponent  {
       this.board[i][1] != "*"){
         this.win = true;
         this.hasil = "PLAYER " + this.turn +" WIN";
+        return 0;
       }
     }
     // check baris
@@ -62,6 +64,7 @@ export class AppComponent  {
       this.board[0][i] != "*"){
         this.win = true;
         this.hasil = "PLAYER " + this.turn +" WIN";
+        return 0;
       }
       else if(this.board[1][i] == this.board[2][i] &&
       this.board[1][i] == this.board[3][i] &&
@@ -69,9 +72,10 @@ export class AppComponent  {
       this.board[1][i] != "*"){
         this.win = true;
         this.hasil = "PLAYER " + this.turn +" WIN";
+        return 0;
       }
     }
   }
 
-  
+
 }
